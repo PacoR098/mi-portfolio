@@ -1,0 +1,46 @@
+<nav class="navbar">
+  <div class="navbar__logo">
+    <img src="/images/logo.png" alt="Logo" />
+  </div>
+  <ul class="navbar__links">
+    <li><a href="#home">HOME</a></li>
+    <li><a href="#about">ABOUT ME</a></li>
+    <li><a href="#experience">EXPERIENCE</a></li>
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+</nav>
+
+<style>
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: var(--altura-navbar);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background: var(--blanco); /* ajusta al fondo del Figma */
+  }
+
+  .navbar__logo img {
+    height: 50px; /* ajusta al tamaño del Figma */
+  }
+
+  .navbar__links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .navbar__links a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 500;
+  }
+
+  .navbar__links a:hover {
+    color: var(--color-principal);
+  }
+</style>
