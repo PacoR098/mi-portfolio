@@ -1,0 +1,106 @@
+<section id="home" class="home">
+  <div class="home__contenido">
+    <div class="home__texto">
+      <h1 class="home__nombre">Francisco Romero</h1>
+      <p class="home__cargo">Web Developer</p>
+      <div class="home__botones">
+        <a href="#about" class="boton">About me</a>
+        <a href="#contact" class="boton">Get in touch</a>
+      </div>
+    </div>
+
+    <img class="home__foto" src="/images/Home.png" alt="Foto de Francisco Romero" />
+  </div>
+
+  <a href="#about" class="home__scroll">
+    <span>Scroll down</span>
+    <div class="home__raton">
+        <img src="/images/raton.gif" alt="Icono de ratón" />
+    </div>
+  </a>
+</section>
+
+<style>
+  .home {
+    position: relative;
+    min-height: calc(100vh - var(--altura-navbar)); /* ocupa lo que queda de pantalla */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 24px;
+  }
+
+  .home__contenido {
+    flex: 1;                          /* se estira y empuja "Scroll down" abajo */
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* dos columnas iguales: texto y foto */
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: var(--ancho-contenido);
+  }
+
+  .home__nombre {
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .home__cargo {
+    font-size: clamp(28px, 3.7vw, 48px);
+    color: var(--color-principal);
+    line-height: 1.2; 
+  }
+
+  .home__botones  {
+    display: flex;
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .boton {
+    padding: 14px 36px;
+    background: var(--azul-noche);
+    border-radius: 999px;             /* píldora totalmente redondeada */
+    font-size: 16px;
+  }
+
+  .boton:hover {
+    border-radius: 999px;             /* píldora totalmente redondeada */
+    border: 2px solid var(--color-principal);
+    color: var(--color-principal);
+    padding: 16px 38px;
+    transition:all 0.2s ease-in-out;
+  }
+
+  .home__foto {
+    justify-self: end;
+    height: min(499px, calc(100vh - var(--altura-navbar) - 140px));
+    width: auto;
+    max-width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 28px;
+  }
+
+  .home__scroll {
+     position: absolute;
+     bottom: 24px;
+     left: 50%;
+     transform: translateX(-50%);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 8px;                /* separación entre el texto y el ratón */
+     font-size: 12px;
+     color: var(--color-principal);
+  }
+
+    .home__raton {
+     width: 24px;
+     height: 40px;            /* caja de tamaño fijo, sin depender del GIF */
+     object-fit: contain;
+     scale: 1.5;                /* aumenta el tamaño del GIF */   
+    }
+  
+</style>
