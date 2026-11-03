@@ -36,7 +36,7 @@
     border-radius: 20px;       /* esquinas redondeadas */
   }
 
-  .navbar__logo {          
+  .navbar__logo {
     font-size: 16px;
     font-weight: 700;
   }
@@ -52,17 +52,43 @@
   }
 
   .navbar__links a {
+    border-radius: 999px;              /* píldora totalmente redondeada */
+    border: 2px solid transparent;     /* para que el tamaño no cambie al hacer hover */
+    padding: 8px 16px;
     font-size: 13px;
     font-weight: 700;
-    transition: color 0.2s;    /* el cambio de color es suave */
+    transition: all 0.2s ease-in-out;  /* el cambio es suave al entrar y al salir */
   }
 
-  .navbar__links a:hover {
-    border-radius: 999px;             /* píldora totalmente redondeada */
-    transition:all 0.2s ease-in-out;
+  /* El enlace activo se ve igual que cuando pasas el ratón */
+  .navbar__links a:hover,
+  .navbar__links a.activo {
     background: var(--azul-noche-profundo);
-    padding: 8px 16px;
     color: var(--color-principal);
     border: 2px solid var(--color-principal);
   }
 </style>
+
+<script>
+  // Marca como activo el enlace de la sección que estás viendo
+  const enlaces = document.querySelectorAll('.navbar__links a');
+  const secciones = document.querySelectorAll('section[id]');
+
+  const observador = new IntersectionObserver(
+    (entradas) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          enlaces.forEach((enlace) => {
+            enlace.classList.toggle(
+              'activo',
+              enlace.getAttribute('href') === '#' + entrada.target.id
+            );
+          });
+        }
+      });
+    },
+    { rootMargin: '-50% 0px -50% 0px' }
+  );
+
+  secciones.forEach((seccion) => observador.observe(seccion));
+</script>

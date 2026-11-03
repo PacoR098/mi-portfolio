@@ -1,0 +1,110 @@
+---
+import cv from '../data/cv.json';
+---
+
+<section id="about" class="about">
+  <div class="about__contenido">
+    <div class="about__texto">
+      <h2 class="about__titulo">About me</h2>
+      <p>
+        I’m a Web Application Development student (Higher Technician degree)
+        with a previous background in Sports Science and Executive Assistance.
+      </p>
+      <p>
+        I have a solid foundation in HTML, CSS, JavaScript, Java and SQL, and
+        during my training at Soltel Group I worked with Spring Boot, Angular,
+        Flutter, Docker and Git, as well as AI-assisted development tools.
+      </p>
+      <p>
+        Having worked in team-based, fast-paced environments, I bring good
+        communication, problem-solving skills and a commitment to quality. I’m
+        looking for an internship to take my first step into development and
+        keep learning.
+      </p>
+    </div>
+
+    <div class="about__skills">
+      <h3 class="about__skills-titulo">Skills</h3>
+      <ul class="about__iconos">
+        {cv.skills.map((skill) => (
+          <li><img src={skill.icono} alt={skill.nombre} /></li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    min-height: calc(100vh - var(--altura-navbar));
+    display: flex;
+    align-items: center;
+    padding: 80px 20px;
+    background: var(--azul-noche);
+  }
+
+  .about__contenido {
+    display: grid;
+    grid-template-columns: 1fr auto; /* texto a la izquierda, tarjeta a la derecha */
+    gap: 60px;
+    align-items: start;             /* ambos alineados arriba */
+    width: 100%;
+    max-width: var(--ancho-contenido);
+    margin: 0 auto;                  /* centra el bloque en la pantalla */
+  }
+
+  .about__texto {
+    max-width: 560px;
+  }
+
+  .about__titulo {
+    margin-bottom: 24px;
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  .about__texto p {
+    margin-bottom: 1.5em;            /* hueco entre párrafos */
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .about__skills {
+    padding: 16px 20px;
+    background: var(--azul-noche-profundo);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 22px;
+  }
+
+  .about__skills-titulo {
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .about__iconos {
+    display: flex;
+    gap: 14px;
+    list-style: none;
+  }
+
+  .about__iconos img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .about__iconos img:hover {
+    transform: scale(1.28);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+  }
+
+  /* En pantallas estrechas, texto y tarjeta van uno debajo del otro */
+  @media (max-width: 800px) {
+    .about__contenido {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

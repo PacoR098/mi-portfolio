@@ -1,0 +1,95 @@
+---
+import cv from '../data/cv.json';
+---
+
+<section id="experience" class="experience">
+  <div class="experience__contenido">
+    <h2 class="experience__titulo">
+      <span class="experience__logo">CV</span>
+      Experience
+    </h2>
+
+    {cv.experiencia.map((trabajo) => (
+      <article class="tarjeta">
+        <h3 class="tarjeta__cabecera">
+          <span class="tarjeta__empresa">{trabajo.empresa}</span>
+          <span class="tarjeta__detalle"> · {trabajo.detalle}</span>
+        </h3>
+        <ul class="tarjeta__lista">
+          {trabajo.puntos.map((punto) => <li>{punto}</li>)}
+        </ul>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  .experience {
+    display: flex;
+    align-items: center;        /* centra el contenido en vertical */
+    padding: 80px 20px;
+  }
+
+  .experience__contenido {
+    width: 100%;
+    max-width: var(--ancho-contenido);
+    margin: 0 auto;             /* centra el bloque en horizontal */
+  }
+
+  .experience__titulo {
+    display: flex;
+    align-items: center;        /* logo y texto a la misma altura */
+    gap: 12px;
+    margin-bottom: 56px;
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  /* El logo "CV" hecho con CSS, así no depende de ninguna imagen */
+  .experience__logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 36px;
+    background: var(--azul-claro);
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .tarjeta {
+    padding: 28px 32px;
+    background: var(--azul-noche);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 28px;
+  }
+
+  .tarjeta: hover {
+    background: var(--azul-noche-profundo);
+  }
+
+  .tarjeta__cabecera {
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+
+  .tarjeta__empresa {
+    font-size: 20px;            /* el nombre de la empresa, más grande */
+  }
+
+  .tarjeta__detalle {
+    font-size: 14px;            /* el resto de la cabecera, más pequeño */
+  }
+
+  .tarjeta__lista {
+    padding-left: 20px;         /* deja sitio a las viñetas */
+    color: var(--color-principal);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .tarjeta__lista li {
+    margin-bottom: 2px;
+  }
+</style>
