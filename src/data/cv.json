@@ -1,0 +1,25 @@
+{
+  "skills": [
+    { "nombre": "JavaScript", "icono": "/images/skills/JS.png" },
+    { "nombre": "MySQL", "icono": "/images/skills/MYSQL.png" },
+    { "nombre": "Figma", "icono": "/images/skills/Figma.png" },
+    { "nombre": "React", "icono": "/images/skills/React.png" },
+    { "nombre": "VS Code", "icono": "/images/skills/VS.png" },
+    { "nombre": "Java", "icono": "/images/skills/Java.png" },
+    { "nombre": "Spring", "icono": "/images/skills/Spring.png" }
+  ],
+  "experiencia": [
+    {
+      "empresa": "Soltel Group",
+      "detalle": "In-company Training, Application Development · May 2026",
+      "puntos": [
+        "Backend: Introduction to Java and Spring Boot, dependency management with Maven, database connectivity, and cloud services integration.",
+        "Frontend: Application development with Angular and component communication.",
+        "Mobile Development: Introduction to Flutter and Android Studio, including a team-developed app presented at the end of the training.",
+        "Tools and Deployment: Version control with Git, introductory Docker training, and setting up projects with database integration.",
+        "AI Applied to Software Development: Use of AI-based models and tools within the development environment, including code refactoring and optimization.",
+        "Teamwork: Training on the internal Agora platform and several group projects involving the presentation of results."
+      ]
+    }
+  ]
+}
