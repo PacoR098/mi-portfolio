@@ -47,5 +47,10 @@
       "demo": "#",
       "codigo": "https://github.com/PacoR098"
     }
+  ],
+  "contacto": [
+    { "nombre": "GitHub", "imagen": "/images/Botones/GitHub.png", "enlace": "https://github.com/PacoR098" },
+    { "nombre": "Linkedin", "imagen": "/images/Botones/Linkedin.png", "enlace": "https://www.linkedin.com/in/francisco-romero-rodr%C3%ADguez-56aa49262" },
+    { "nombre": "EMail", "imagen": "/images/Botones/EMail.png", "enlace": "mailto:pacoromero777@gmail.com" }
   ]
 }
