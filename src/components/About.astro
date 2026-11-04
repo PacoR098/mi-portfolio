@@ -36,7 +36,6 @@ import cv from '../data/cv.json';
 
 <style>
   .about {
-    min-height: calc(100vh - var(--altura-navbar));
     display: flex;
     align-items: center;
     padding: 80px 20px;
@@ -45,12 +44,12 @@ import cv from '../data/cv.json';
 
   .about__contenido {
     display: grid;
-    grid-template-columns: 1fr auto; /* texto a la izquierda, tarjeta a la derecha */
+    grid-template-columns: 1fr auto;
     gap: 60px;
-    align-items: start;             /* ambos alineados arriba */
+    align-items: start;
     width: 100%;
     max-width: var(--ancho-contenido);
-    margin: 0 auto;                  /* centra el bloque en la pantalla */
+    margin: 0 auto;
   }
 
   .about__texto {
@@ -64,7 +63,7 @@ import cv from '../data/cv.json';
   }
 
   .about__texto p {
-    margin-bottom: 1.5em;            /* hueco entre párrafos */
+    margin-bottom: 1.5em;
     font-size: 18px;
     font-weight: 500;
     line-height: 1.4;

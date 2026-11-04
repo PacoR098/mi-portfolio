@@ -23,7 +23,6 @@
 <style>
   .home {
     position: relative;
-    min-height: calc(100vh - var(--altura-navbar));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,9 +30,9 @@
   }
 
   .home__contenido {
-    flex: 1;                          /* se estira y empuja "Scroll down" abajo */
+    flex: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr;   /* dos columnas iguales: texto y foto */
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 40px;
     width: 100%;
@@ -61,12 +60,12 @@
   .boton {
     padding: 14px 36px;
     background: var(--azul-noche);
-    border-radius: 999px;             /* píldora totalmente redondeada */
+    border-radius: 999px;
     font-size: 16px;
   }
 
   .boton:hover {
-    border-radius: 999px;             /* píldora totalmente redondeada */
+    border-radius: 999px;
     border: 2px solid var(--color-principal);
     color: var(--color-principal);
     padding: 16px 38px;
@@ -91,16 +90,16 @@
      display: flex;
      flex-direction: column;
      align-items: center;
-     gap: 12px;                /* separación entre el texto y el ratón */
+     gap: 12px;
      font-size: 16px;
      color: var(--color-principal);
   }
 
     .home__raton {
      width: 24px;
-     height: 40px;            /* caja de tamaño fijo, sin depender del GIF */
+     height: 40px;
      object-fit: contain;
-     scale: 1.5;                /* aumenta el tamaño del GIF */   
+     scale: 1.5;
     }
   
 </style>

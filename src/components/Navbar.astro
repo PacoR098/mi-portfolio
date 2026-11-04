@@ -13,19 +13,20 @@
 
 <style>
   .header {
-    position: sticky;          /* se queda pegada arriba al hacer scroll */
+    position: sticky;
     top: 0;
-    z-index: 10;               /* siempre por encima del contenido */
+    z-index: 10;
     height: var(--altura-navbar);
+    margin-bottom: calc(var(--altura-navbar) * -1);
     display: flex;
-    justify-content: center;   /* centra la píldora en horizontal */
-    align-items: center;       /* y en vertical */
+    justify-content: center;
+    align-items: center;
     padding: 0 20px;
   }
 
   .navbar {
     display: flex;
-    justify-content: space-between; /* logo a la izquierda, enlaces a la derecha */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: var(--ancho-contenido);
@@ -33,7 +34,7 @@
     padding: 0 40px;
     background: var(--azul-noche);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 20px;       /* esquinas redondeadas */
+    border-radius: 20px;
   }
 
   .navbar__logo {
@@ -42,25 +43,24 @@
   }
 
   .navbar__logo span {
-    color: var(--rojo);        /* el punto rojo del logo */
+    color: var(--rojo);
   }
 
   .navbar__links {
     display: flex;
-    gap: 40px;                 /* separación entre enlaces */
+    gap: 40px;
     list-style: none;
   }
 
   .navbar__links a {
-    border-radius: 999px;              /* píldora totalmente redondeada */
-    border: 2px solid transparent;     /* para que el tamaño no cambie al hacer hover */
+    border-radius: 999px;
+    border: 2px solid transparent;
     padding: 8px 16px;
     font-size: 13px;
     font-weight: 700;
-    transition: all 0.2s ease-in-out;  /* el cambio es suave al entrar y al salir */
+    transition: all 0.2s ease-in-out;
   }
 
-  /* El enlace activo se ve igual que cuando pasas el ratón */
   .navbar__links a:hover,
   .navbar__links a.activo {
     background: var(--azul-noche-profundo);
@@ -70,7 +70,6 @@
 </style>
 
 <script>
-  // Marca como activo el enlace de la sección que estás viendo
   const enlaces = document.querySelectorAll('.navbar__links a');
   const secciones = document.querySelectorAll('section[id]');
 
