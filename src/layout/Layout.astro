@@ -51,7 +51,7 @@ const { title } = Astro.props;
     --color-principal: var(--azul-claro);
     --fuente-base: 'DM Sans', system-ui, sans-serif;
     --altura-navbar: 90px;
-    --ancho-contenido: 1000px; /* ancho común de navbar y secciones */
+    --ancho-contenido: 1000px;
   }
 
   * {
@@ -62,7 +62,7 @@ const { title } = Astro.props;
 
   html {
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity; /* NUEVO: la página se imanta al principio de cada sección */
+    scroll-snap-type: y proximity;
   }
 
   body {
@@ -73,9 +73,8 @@ const { title } = Astro.props;
   }
 
   section {
-    min-height: calc(100vh - var(--altura-navbar));
-    scroll-margin-top: var(--altura-navbar);
-    scroll-snap-align: start; /* NUEVO: el principio de cada sección es el punto de anclaje */
+    min-height: 100vh;
+    scroll-snap-align: start;
   }
 
   a {

@@ -38,9 +38,9 @@ import cv from '../data/cv.json';
 <style>
   .projects {
     display: flex;
-    align-items: center;            /* centra el contenido en vertical */
+    align-items: center;
     padding: 80px 20px;
-    background: var(--azul-noche);  /* fondo algo más claro, como en el diseño */
+    background: var(--azul-noche);
   }
 
   .projects__contenido {
@@ -57,12 +57,12 @@ import cv from '../data/cv.json';
   }
 
   .projects__titulo span {
-    color: var(--color-principal);  /* "Projects" en azul */
+    color: var(--color-principal);
   }
 
   .projects__rejilla {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    grid-template-columns: repeat(3, 1fr);
     gap: 28px;
   }
 
@@ -73,7 +73,7 @@ import cv from '../data/cv.json';
     background: var(--azul-noche-profundo);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 20px;
-    transition: all 0.2s ease-in-out;  /* NUEVO: el cambio es suave al entrar y al salir */
+    transition: all 0.2s ease-in-out;
     }
 
   .proyecto:hover {
@@ -98,7 +98,7 @@ import cv from '../data/cv.json';
     font-size: 16px;
     font-weight: 400;
     line-height: 1.2;
-    transition: color 0.2s ease-in-out;  /* NUEVO: el color cambia con suavidad */
+    transition: color 0.2s ease-in-out;
     }
   
   .proyecto:hover .proyecto__nombre {
@@ -119,7 +119,7 @@ import cv from '../data/cv.json';
   .proyecto__botones {
     display: flex;
     gap: 8px;
-    margin-top: auto;               /* empuja los botones al fondo de la tarjeta */
+    margin-top: auto;
   }
 
   .mini-boton {
@@ -128,7 +128,7 @@ import cv from '../data/cv.json';
     gap: 8px;
     padding: 6px 14px;
     background: var(--azul-noche);
-    border: 1px solid transparent;  /* reserva el sitio del borde para el hover */
+    border: 1px solid transparent;
     border-radius: 999px;
     font-size: 11px;
     transition: all 0.2s ease-in-out;
@@ -145,7 +145,6 @@ import cv from '../data/cv.json';
     color: var(--color-principal);
   }
 
-  /* En pantallas estrechas, las tarjetas pasan a una columna */
   @media (max-width: 900px) {
     .projects__rejilla {
       grid-template-columns: 1fr;
