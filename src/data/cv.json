@@ -21,5 +21,31 @@
         "Teamwork: Training on the internal Agora platform and several group projects involving the presentation of results."
       ]
     }
+  ],
+  "proyectos": [
+    {
+      "nombre": "SpokenHub",
+      "subtitulo": "AI-Powered English Learning Platform",
+      "descripcion": "Built an Android-first English learning platform with AI conversations, quizzes, and real-time human audio calls. Implemented low-latency communication, secure subscription payments, and a scalable backend for large concurrent learner traffic.",
+      "icono": "/images/Projects/SpokenHub.png",
+      "demo": "#",
+      "codigo": "https://github.com/PacoR098"
+    },
+    {
+      "nombre": "InternMatrix",
+      "subtitulo": "Internship Management Platform",
+      "descripcion": "Developed and maintained a full-stack internship management system for onboarding, internship operations, secure payments, and certificate issuance, supporting hundreds of students across online and offline programs.",
+      "icono": "/images/Projects/InternMatrix.png",
+      "demo": "#",
+      "codigo": "https://github.com/PacoR098"
+    },
+    {
+      "nombre": "Xmarty Creator",
+      "subtitulo": "Production-Ready EdTech Platform",
+      "descripcion": "Built a client-focused EdTech solution with secure authentication, course enrollment, cloud-backed content management, and payment integration. Improved reliability and UX through optimized APIs, caching, and performance tuning.",
+      "icono": "/images/Projects/XmartyCreator.png",
+      "demo": "#",
+      "codigo": "https://github.com/PacoR098"
+    }
   ]
 }

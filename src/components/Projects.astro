@@ -1,0 +1,154 @@
+---
+import cv from '../data/cv.json';
+---
+
+<section id="projects" class="projects">
+  <div class="projects__contenido">
+    <h2 class="projects__titulo">Featured <span>Projects</span></h2>
+
+    <div class="projects__rejilla">
+      {cv.proyectos.map((proyecto) => (
+        <article class="proyecto">
+          <header class="proyecto__cabecera">
+            <img class="proyecto__icono" src={proyecto.icono} alt="" />
+            <div>
+              <h3 class="proyecto__nombre">{proyecto.nombre}</h3>
+              <p class="proyecto__subtitulo">{proyecto.subtitulo}</p>
+            </div>
+          </header>
+
+          <p class="proyecto__descripcion">{proyecto.descripcion}</p>
+
+          <div class="proyecto__botones">
+            <a class="mini-boton" href={proyecto.demo} target="_blank" rel="noopener">
+              <img src="/images/Projects/LiveDemo.png" alt="" />
+              Live Demo
+            </a>
+            <a class="mini-boton" href={proyecto.codigo} target="_blank" rel="noopener">
+              <img src="/images/Projects/GitHub.png" alt="" />
+              Code
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects {
+    display: flex;
+    align-items: center;            /* centra el contenido en vertical */
+    padding: 80px 20px;
+    background: var(--azul-noche);  /* fondo algo más claro, como en el diseño */
+  }
+
+  .projects__contenido {
+    width: 100%;
+    max-width: var(--ancho-contenido);
+    margin: 0 auto;
+  }
+
+  .projects__titulo {
+    margin-bottom: 56px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  .projects__titulo span {
+    color: var(--color-principal);  /* "Projects" en azul */
+  }
+
+  .projects__rejilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 28px;
+  }
+
+  .proyecto {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: var(--azul-noche-profundo);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;  /* NUEVO: el cambio es suave al entrar y al salir */
+    }
+
+  .proyecto:hover {
+    border-color: var(--color-principal);
+    box-shadow: 0 0 20px rgba(1, 149, 231, 0.45);
+    }
+
+  .proyecto__cabecera {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .proyecto__icono {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+
+  .proyecto__nombre {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    transition: color 0.2s ease-in-out;  /* NUEVO: el color cambia con suavidad */
+    }
+  
+  .proyecto:hover .proyecto__nombre {
+    color: var(--color-principal);
+    }
+
+  .proyecto__subtitulo {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+
+  .proyecto__descripcion {
+    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .proyecto__botones {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;               /* empuja los botones al fondo de la tarjeta */
+  }
+
+  .mini-boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: var(--azul-noche);
+    border: 1px solid transparent;  /* reserva el sitio del borde para el hover */
+    border-radius: 999px;
+    font-size: 11px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .mini-boton img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+  }
+
+  .mini-boton:hover {
+    border-color: var(--color-principal);
+    color: var(--color-principal);
+  }
+
+  /* En pantallas estrechas, las tarjetas pasan a una columna */
+  @media (max-width: 900px) {
+    .projects__rejilla {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

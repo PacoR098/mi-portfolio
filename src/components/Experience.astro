@@ -63,10 +63,12 @@ import cv from '../data/cv.json';
     background: var(--azul-noche);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 28px;
+    transition: all 0.2s ease-in-out;     /* NUEVO: el cambio es suave al entrar y al salir */
   }
 
-  .tarjeta: hover {
-    background: var(--azul-noche-profundo);
+  .tarjeta:hover {
+    border-color: var(--color-principal);
+    box-shadow: 0 0 20px rgba(1, 149, 231, 0.45);
   }
 
   .tarjeta__cabecera {
@@ -75,7 +77,12 @@ import cv from '../data/cv.json';
   }
 
   .tarjeta__empresa {
-    font-size: 20px;            /* el nombre de la empresa, más grande */
+    font-size: 20px;
+    transition: color 0.2s ease-in-out;   /* NUEVO: el color cambia con suavidad */
+  }
+
+  .tarjeta:hover .tarjeta__empresa {
+    color: var(--color-principal);
   }
 
   .tarjeta__detalle {
